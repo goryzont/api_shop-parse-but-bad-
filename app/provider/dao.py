@@ -1,5 +1,5 @@
-from sqlalchemy import select, update
-from fastapi import Body
+from sqlalchemy import  update
+
 
 from app.dao.base import BaseDAO
 from app.database import async_session_maker
