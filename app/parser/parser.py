@@ -54,10 +54,6 @@ class ParseWB:
         with conn:
             with conn.cursor() as curs:
                 for product in items.products:
-                    # if ' ' in product.name:
-                    #     product.name = product.name.replace(" ", '')
-                    # if ' ' in product.supplier:
-                    #     product.supplier = product.supplier.replace(" ", '')
                     query = f"INSERT INTO product (id, name, provider, price, quantity)VALUES ({product.id}, '{product.name}', '{product.supplier}', {product.salePriceU}, {product.volume});"
                     curs.execute(query)
                     conn.commit()
